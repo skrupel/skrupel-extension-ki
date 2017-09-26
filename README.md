@@ -2,7 +2,9 @@ Skrupel-Erweiterung KI
 ======================
 
 Version: 0.11.4
+
 Autor: Wasserleiche
+
 Email: Wasserleiche88@gmail.com
 
 
