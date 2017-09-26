@@ -1,0 +1,42 @@
+
+===================
+Skrupel-KI Tabellen
+===================
+
+--------------------
+skrupel_ki_planeten:
+--------------------
+id					Datenbank-ID
+planeten_id			ID des Planeten in der Skrupel-Datenbank
+comp_id				ID des KI-Spielers, der das Objekt betrachtet
+extra				Extra-Informationen:
+						- 0 Planet ist aufgrund schlechter Temperatur nicht besiedelbar
+						- 1 Planet ist aufgrund einer unerwuenschten dominanten Spezies nicht besiedelbar
+						- 2 Planet ist in Feindeshand
+---------------------
+skrupel_ki_neuebasen:
+---------------------
+id					Datenbank-ID
+planeten_id			ID des Planeten in der Skrupel-Datenbank, auf dem die KI eine neue Sternenbasis errichten will
+
+-------------------
+skrupel_ki_objekte:
+-------------------
+id					Datenbank-ID
+objekt_id			ID des Objekts in der Skrupel-Datenbank
+comp_id				ID des KI-Spielers, der das Objekt betrachtet
+extra				Extra-Informationen:
+						- 0 Wurde gesehn, aber noch nicht durchflogen
+						- 1 Wurde durchflogen und ist stabil
+						- 2 Wurde durchflogen und ist instabil
+
+--------------------------
+skrupel_ki_spezialschiffe:
+--------------------------
+id					Datenbank-ID
+schiff_id			ID des Schiffs in der Skrupel-Datenbank
+spezial_mission		Spezialmission:
+						- 1 Die Spezialmission des Schiffes ist virale Invasion.
+						- 2 Die Spezialmission des Schiffes ist Strukturtaster.
+aktiv				0, falls die Spezialmission des Schiffes im Moment nicht benutzt wird,
+					1, sonst.

@@ -1,0 +1,986 @@
+
+==========
+Change-Log
+==========
+==========
+------------------
+0.11.3: -> 0.11.4:
+------------------
+Behobene Fehler:
+- Lädt ein Frachter Cantox von einem Planeten, werden die Cantox auch wirklich vom Planeten subtrahiert.
+
+Todo:
+- ki_mittel muss noch stark verbessert werden (Bitte Vorschlaege machen!).
+
+------------------
+0.11.2: -> 0.11.3:
+------------------
+Behobene Fehler:
+- Eigene Planeten, die vom Feind angegriffen werden, werden nun nicht mehr als moegliche neue Basis betrachtet.
+
+Todo:
+- ki_mittel muss noch stark verbessert werden (Bitte Vorschlaege machen!).
+
+------------------
+0.11.1: -> 0.11.2:
+------------------
+Behobene Fehler:
+- Der Zug wird nun erst berechnet, wenn auch wirklich alle menschlichen Spieler ihre Zuege beendet 
+  haben (Danke an myrbel).
+- Es wird nun auch eine Sternenbasis gebaut, falls das Spiel ohne Sternenbasen begonnen hat.
+
+Todo:
+- ki_mittel muss noch stark verbessert werden (Bitte Vorschlaege machen!).
+
+------------------
+0.11.0: -> 0.11.1:
+------------------
+Neue Features:
+- ki_mittel kann nun die orbitalen Systeme Megafabrik, Metropole, Vergnuegungspark und Reservat bauen.
+- Der Code zum Erkunden wurde verbessert.
+- Frachter nehmen nun ab 8 Koloninen mehr Kolonisten mit (ki_mittel).
+- Jaeger geben nun Jaegern mit Schaden keinen Geleitschutz mehr (ki_mittel).
+- Bei ki_leicht und ki_mittel wurde im jeweiligen Konstruktor die Dokumentation verbessert.
+
+Behobene Fehler:
+- Orbitale Systeme werden nun wieder gebaut.
+- ki_mittel wird jetzt erst ab 20 Planeten mehr Kolonisten pro Planet mit nehmen, da sonst zu frueh der Heimat-
+  Planet wenig Kolonisten hat.
+
+Todo:
+- ki_mittel muss noch stark verbessert werden (Bitte Vorschlaege machen!).
+
+------------------
+0.10.5: -> 0.11.0:
+------------------
+Neue Features:
+- Die Arbeit an ki_mittel hat begonnen (bisher wurde nur das Erkunden verbessert).
+- Das Erkunden von Schiffen wurde etwas verbessert (ki_leicht).
+- ki_basis und ki_mittel haben eine komplette Beschreibung bekommen.
+
+Behobene Fehler:
+- Die KI-Spieler heissen nun nicht mehr alle gleich.
+- Der Code wurde etwas aufgeraeumt.
+- Ist die KI deaktiviert worden und gibt es schon KI-Spieler in der Datenbank, so sind diese nun nicht mehr 
+  auswaehlbar beim Spiel-Erstellen.
+
+Todo:
+- ki_mittel muss noch stark verbessert werden (Bitte Vorschlaege machen!).
+
+------------------
+0.10.4: -> 0.10.5:
+------------------
+Neue Features:
+- Jaeger mit Destabilisatoren koennen diesen nun benutzen.
+- Bei Scouts und Taster-Schiffen wird nun auch die Taktik und die Aggressivitaet gesetzt.
+- Es ist nun moeglich, pro installierter KI mehrere KI-Spieler in einem Spiel einzusetzen.
+- Schiffe nehmen nun mehr Lemin mit, wenn sie auf ein Feind-Schiff abfangen.
+- Jaeger fliegen nun nichtmehr mit weniger als 90 Lemin los.
+
+Behobene Fehler:
+- Jaeger fliegen jetzt mit ihrem eigenem Maximum-Warp zu Jaegern, denen sie Begleitschutz geben.
+- Ein Fehler im Nummern-Auswahl-System fuer Schiff-Namen wurde behoben.
+- Kolonisierende Frachter fliegen nun auch zu Planeten, die im Langstrecken-Scanner sichtbar sind.
+
+------------------
+0.10.3: -> 0.10.4:
+------------------
+Neue Features:
+- Scouts wurden eingefuehrt, damit die KI effektiver erkunden kann. Diese Scouts koennen, falls vorhanden, 
+  die erweiterte Sensorphalanx oder das astrophysisches Labor benutzen.
+- Jaeger und Frachter, die Schaden erlitten haben und ueber Lloyds Fluchtmanoever verfuegen, benutzen dieses 
+  nun auch, um schnell zu einer Basis zu kommen.
+- Das System zum benennen der Schiffe wurde veraendert: Wird ein Schiff zerstoert, so wird seine Zahl im Namen 
+  fuer das naechste gebaute Schiff verwendet usw. So hat jedes Schiff einen eigene Zahl im Namen.
+- Das Verhalten von Frachtern wurde etwas verbessert.
+
+Behobene Fehler:
+- Fehler bei Benutzen und Erfassen von Wurmloechern wurden behoben.
+- Ist ein Jaeger, der Schaden erlitten hat, an einem Planeten (der keine Sternenbasis hat), so tankt er dort auch.
+- Eine Endlosschleife im Geleitschutz-System wurde behoben.
+- Jaeger, die einem anderen Jaeger Geleitschutz geben, bombadieren wieder Feind-Planeten, wenn sie an einem sind.
+
+Todo:
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+------------------
+0.10.2: -> 0.10.3:
+------------------
+Neue Features:
+- Der Code wurde uebersichtlicher gestaltet und vereinfacht.
+- Jaeger koennen nun zu feindlichen Minenfelder fliegen und diese raeumen, wenn es moeglich ist.
+- Jaegern, die zu wenig Lemin haben, wird nun kein Geleitschutz mehr gegeben.
+- Die KI legt/raeumt keine Minenfelder mehr, wenn Minenfelder im Spiel nicht aktiviert sind.
+- Frachter und Jaeger bekommen eine Aggressivitaet und, falls im Spiel aktiviert, eine Taktik zu gewiesen.
+- In der Readme.txt wurde ein Hinweis zur unterstuetzten Skrupel-Version eingefuegt.
+
+Behobene Fehler:
+- Das Umfliegen von Wurmloechern funktinioniert nun besser.
+- Geleitschutz-Formationen werden nun sinnvoller gebildet.
+- Schiffe bleiben nun nicht mehr an Planeten um Anomalien haengen.
+- Einige Fehler im Geleitschutz-System wurden behoben, sodass dies nun besser funktionieren sollte.
+- Jaeger erkunden jetzt keine Planeten mehr, die sehr nah an den Kolonien der KI sind.
+
+Todo:
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+- Jaeger sollten weiter differenziert werden, zb. in Angriffsjaeger und Scouts.
+
+------------------
+0.10.1: -> 0.10.2:
+------------------
+Neue Features:
+- KIs koennen nun einfacher installiert werden. Siehe howto KI installieren.txt.
+
+Behobene Fehler:
+- Ernte-Routen wurden verbessert.
+- Einige Fehler beim Beladen von Frachtern wurden behoben.
+- Jaeger bleiben jetzt bei einem Feind-Planeten, um diesen zu bombardieren.
+- Routen zu Planeten, wo eine Sternenbasis gebaut werden soll, werden jetzt sinnvoller gebildet.
+- Die readme.txt wurde angepasst.
+- Jaeger, die ein Wurmloch erkunden, nehmen nun genug Lemin mit.
+- Bei Schiffen, die ein anderes Schiff begleiten, wird nun die Warp-Stufe gesetzt.
+
+Bekannte Fehler:
+- Das Umfliegen von Wurmloechern funktioniert nicht immer.
+- Geleitschutz-Formationen werden nicht gebildet.
+
+Todo:
+- Jaeger mit Hangars sollten Minenfelder raeumen koennen.
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+- Jaeger sollten weiter differenziert werden, zb. in Angriffsjaeger und Scouts.
+
+------------------
+0.10.0: -> 0.10.1:
+------------------
+Neue Features:
+- Jaeger mit virale Invasion benutzen diesen nun statt Planetenbombardement.
+- Minenfelder werden nun nur noch gelegt, wenn in der naehe ueberhaupt Feind-Schiffe sind.
+
+Behobene Fehler:
+- Frachter versorgen Planeten mit Sternenbasen und Planeten, an denen neue Sternenbasen gebaut werden sollen, nun
+  gleichmaessig.
+- Das Sparen von Cantox an Sternenbasen fuer die naechste Rumpf-Stufe wurde verbessert.
+- Schiffe nehmen jetzt sinnvoller Lemin mit, wenn sie von einer Sternenbasis aus starten.
+- Frachter nehmen nun wieder Vorraete mit, wenn am zu beliefernden Planeten ein Cluster-Schiff ist.
+
+Bekannte Fehler:
+- Das Umfliegen von Wurmloechern funktioniert nicht immer.
+- Geleitschutz-Formationen werden nicht gebildet.
+
+Todo:
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+- Jaeger sollten weiter differenziert werden, zb. in Angriffsjaeger und Scouts.
+
+-----------------
+0.9.13 -> 0.10.0:
+-----------------
+Neue Features:
+- Neue Basen-Planeten werden nun nicht mehr von Frachtern abgeerntet.
+- Schiffe mit Quarksreorganistoren werden nun abgeschaltet, falls genug Lemin vorhanden ist.
+- Kolonisierende Frachter fliegen jetzt nicht mehr zu Planeten, wo bereits ein anderer kolonisierender Frachter 
+  hinfliegt.
+- Terraformer fliegen nun erst wieder zu einem neuen Planeten, wenn es einen Planeten gibt, der diese Art von 
+  Terraformer gebrauchen kann.
+- Am Start-Planeten wird nun eine Mindest-Minenanzahl von 220 gebaut.
+- Sternenbasen versorgen nun andere Sternenbasen und angehende Sternenbasen mit Resourcen, die sie benoetigen.
+- Das Verhalten von Frachtern mit Routen wurde verbessert.
+- Die KI faengt jetzt ab Rumpf-Stufe 5 an, fuer die naechste Rumpf-Stufe zu sparen.
+- Die Grenze fuer Raumfalten mit Lemin fuer Schiffe mit wenig Lemin wurde angehoben.
+- Kolonisierende Frachter nehmen jetzt auch schon Mineralien mit.
+- Der Code wurde uebersichtlicher Gestaltet durch die Benutzung von Array-Index-Bezeichnern und der Funktion 
+  @mysql_fetch_array() statt @mysql_fetch_row().
+- Wenn Cluster- oder Quark-Schiffe sich abschalten, entleeren sie ihren Frachtraum.
+- Eintraege in der Tabelle skrupel_ki_spezialschiffe werden nun entfernt, falls sie auf ein nicht mehr 
+  existierendes Schiff verweisen.
+
+Behobene Fehler:
+- Jaeger werden nun wieder richtig gebaut.
+- Frachter verhalten sich nun besser beim Kolonisieren und bei Routen.
+- Schiffe mit Strukturtaster behalten nun nicht mehr ihre Routen-Informationen, wenn sie als Taster-Schiff 
+  aktiviert sind.
+- Terraformer werden nun wirklich erst dann gebaut, wenn sie gebraucht werden.
+- Leere Raumfalten werden nicht mehr verschickt.
+- Terraformer funktionieren wieder.
+- Schiffe mit virale Invasion funktionieren jetzt.
+- Schiffe mit Tarnung nehmen nun auch das noetige Mineral fuer die Tarnung mit.
+- Das Ausbauen von Raumbasen funktioniert wieder.
+- Beim Loeschen von Spielen wird die Tabelle skrupel_ki_spezialschiffe wieder mit aufgeraeumt.
+- Wurmloecher werden nun sinnvoll benutzt.
+- Die Benutzung von Tarnung wurde verbessert.
+- Viele Kleinigkeiten wurden wieder verbessert.
+
+Bekannte Fehler:
+- Das Umfliegen von Wurmloechern funktioniert nicht immer.
+- Geleitschutz-Formationen werden nicht gebildet.
+
+Todo:
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+- Jaeger sollten weiter differenziert werden, zb. in Angriffsjaeger und Scouts.
+
+-----------------
+0.9.12 -> 0.9.13:
+-----------------
+Neue Features:
+- Jaeger koennen sich nun gegenseitig Geleitschutz geben.
+
+Behobene Fehler:
+- Schiffe mit Sprungtriebwerk springen nun nicht mehr aus der Karte heraus.
+- Schiffe fliegen jetzt mit einer sinnvollen Menge an Lemin los.
+- Die Kuatoh bauen nun in sinnvoller Anzahl Taster-Schiffe.
+- Mit Strukturtastern kopierte Schiffe werden nun auch gebaut.
+- Das Verhalten von Frachter und neuen Sternenbasen, die gebaut werden, wurde verbessert.
+- Viele Kleinigkeiten wurden ausgebessert.
+
+Bekannte Fehler:
+- Jaeger sollten weiter differenziert werden, zb. in Angriffsjaeger und Scouts.
+- Jaeger benutzen Wurmloecher nicht richtig.
+- Frachter verhalten sich beim Kolonisieren nicht immer richtig.
+
+-----------------
+0.9.11 -> 0.9.12:
+-----------------
+Neue Features:
+- Planeten, die mit viraler Invasion von einer schlechten Dominanten Spezies befreit wurden, 
+  werden jetzt auch aus der Tabelle skrupel_ki_planeten entfernt.
+- Der Bau von Terraformern und Schiffen mit Virale Invasion wurde sinnvoller gestaltet.
+- Das Verhalten von Schiffen mit virale Invasion wurde verbessert.
+- Sind bei einem Spiel mit einer KI alle menschlichen Spieler ausgeschieden, so wird nun das 
+  Spiel beendet.
+- Frachter und Jaeger heuern nun an Sternenbasen neue Crew-Mitglieder an.
+- Bei Jaegern wird nun der automatische Projektil-Bau aktiviert.
+
+Behobene Fehler:
+- Basen bauen nun nur noch bis zur Stufe 5 ihre Waffensysteme aus.
+
+Bekannte Fehler:
+- Jaeger benutzen Wurmloecher nicht richtig.
+- Frachter verhalten sich beim Kolonisieren nicht immer richtig.
+
+Todo:
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+-----------------
+0.9.10 -> 0.9.11:
+-----------------
+Neue Features:
+- Die Zugberechnung wurde ausgelagert und verbessert (siehe readme.txt).
+- Wird ein Spiel geloescht, so weerden die dazugehoerigen Eintraege in den KI-Tabellen 
+  ebenfalls geloescht.
+
+Todo:
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+----------------
+0.9.9 -> 0.9.10:
+----------------
+Neue Features:
+- Sprungtriebwerke werden jetzt benutzt.
+- Schiffe mit Strukturtaster fliegen nun gezielt auf Schiffe.
+- Die von Strukturtastern gewonnen Konstruktionsplaene werden nun verwendet.
+- Schiffe mit Cybernrittnikk werden jetzt gebaut und benutzt.
+- Schiffe mit Tarnfeldgenerator sind nun in der Lage, diesen zu nutzen.
+- Schiffe setzen nun sinnvollere Erkundungs-Kurse.
+- Viele kleine Detail-Verbesserungen wurden durchgefuehrt.
+
+Behobene Fehler:
+- Frachter mit Routen stecken jetzt nicht mehr auf einem Planeten fest.
+- Noch ein Fehler mit negativen Resourcen bei Frachtern wurde behoben.
+- Fliehende Schiffe fliegen nun nicht mehr ueber die Spiel-Grenzen hinaus.
+- Die Verwaltung von Schiffen mit Subraumverzerrer wurde stark vereinfacht.
+- Wurmloecher sollten nun wieder richtig genutzt werden!
+
+Todo:
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+---------------
+0.9.8 -> 0.9.9:
+---------------
+Neue Features:
+- Je nach Rumpf-Stufe erhalten Frachter und Jaeger nun unterschiedlich viel Start-Lemin.
+- Die virale Invasion gegen unerwuenschte Spezies wird genutzt.
+- Unterstuetzung fuer die Skrupel-Version 0.972 wurde in der readme.txt hinzugefuegt.
+
+Behobene Fehler:
+- Viele Fehler wurden beim Wurmloch-System behoben.
+- ki_leicht cheatet nicht mehr in den Anfangs-Runden beim Minen-/Fabriken-Bau.
+- Das Verhalten von Schiffen mit Terraformern wurde verbessert.
+
+Bekannte Fehler:
+- Das Umfliegen und Benutzen von Wurmloechern von Jaegern als auch Frachtern funktioniert nicht richtig.
+
+Todo:
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+---------------
+0.9.7 -> 0.9.8:
+---------------
+Neue Features:
+- Das Zug-Ausloesen wurde stark verbessert.
+- Bei genuegend Jaegern und schon etwas vorhandenen Cantox spart die KI nun auf die naechste 
+  Rumpf-Stufe bei ihren Sternenbasen, dh. es werden vorerst keine weiteren Jaeger mehr gebaut.
+
+Behobene Fehler:
+- Kolonisierende Frachter sollten nun (zB. aufgrund von Piratenangriffen) keine negativen Resourcen 
+  mehr haben.
+
+Bekannte Fehler:
+- Das Umfliegen und Benutzen von Wurmloechern von Jaegern funktioniert nicht richtig.
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht angemessen.
+
+Todo:
+- Die Virale Invasion der Orion sollte gegen unerwuenschte dominante Spezies genutzt werden.
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+---------------
+0.9.6 -> 0.9.7:
+---------------
+Behobene Fehler:
+- Terraformer-Schiffe werden jetzt wieder in angemessener Anzahl gebaut und verhalten sich wie 
+  gedacht.
+- Es werden jetzt wieder sinnvolle Jaeger gebaut.
+- Viele kleine Detail-Korrekturen wurden vorgenommen.
+
+Bekannte Fehler:
+- Das Umfliegen und Benutzen von Wurmloechern von Jaegern funktioniert nicht richtig.
+- Es kommt vor, dass Frachter negative Resourcen haben (moeglicherweise nur Frachter, die nicht ernten).
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht angemessen.
+
+Todo:
+- Die Virale Invasion der Orion sollte gegen unerwuenschte dominante Spezies genutzt werden.
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+---------------
+0.9.5 -> 0.9.6:
+---------------
+Behobene Fehler:
+- Frachter sollten jetzt wieder richtig kolonisieren.
+- Kleinere Code- und Detail-Verbesserungen wurden vorgenommen.
+
+Bekannte Fehler:
+- Das Umfliegen und Benutzen von Wurmloechern von Jaegern funktioniert nicht richtig.
+- Es kommt vor, dass Frachter negative Resourcen haben (moeglicherweise nur Frachter, die nicht ernten).
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht angemessen.
+
+Todo:
+- Die Virale Invasion der Orion sollte gegen unerwuenschte dominante Spezies genutzt werden.
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+---------------
+0.9.4 -> 0.9.5:
+---------------
+Behobene Fehler:
+- Die Dateien ki_leicht/sternenbasen_leicht/basen_schiffbau_leicht.php und 
+  ki_basis/schiffe_basis/schiffe_basis.php wurden nun vollstaendig an die Aenderungen der 
+  eigenschaften-Klassen angepasst.
+
+Bekannte Fehler:
+- Das Umfliegen und Benutzen von Wurmloechern von Jaegern funktioniert nicht richtig.
+- Es kommt vor, dass Frachter negative Resourcen haben (moeglicherweise nur Frachter, die nicht ernten).
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht angemessen.
+
+Todo:
+- Die Virale Invasion der Orion sollte gegen unerwuenschte dominante Spezies genutzt werden.
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+---------------
+0.9.3 -> 0.9.4:
+---------------
+Neue Features:
+- ki_leicht reagiert nun auf politische Anfragen.
+- Die Klasse eigenschaften ist jetzt eine Singleton-Klasse.
+- Die Datei "ki_leicht Beschreibung.txt" wurde aktualisiert.
+
+Behobene Fehler:
+- Sammel-Routen von Frachtern funktionieren jetzt wieder.
+- Jaeger fliegen jetzt nicht mehr jede Runde ein neues Ziel an.
+
+Bekannte Fehler:
+- Das Umfliegen und Benutzen von Wurmloechern von Jaegern funktioniert nicht richtig.
+- Es kommt vor, dass Frachter negative Resourcen haben (moeglicherweise nur Frachter, die nicht ernten).
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht angemessen.
+
+Todo:
+- Die Virale Invasion der Orion sollte gegen unerwuenschte dominante Spezies genutzt werden.
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+---------------
+0.9.2 -> 0.9.3:
+---------------
+Neue Features:
+- Schiffe mit Subraumverzerrer benutzen diesen nun auch (konnte leider noch nicht getestet werden!).
+
+Behobene Fehler:
+- Raumfalten sollten jetzt wieder funktionieren.
+- Bei der Erd-Allianz werden jetzt die richtigen Frachter gebaut. Diese Sorte Fehler sollte auch bei 
+  anderen Rassen nicht mehr auftreten koennen.
+
+Bekannte Fehler:
+- Das Umfliegen und Benutzen von Wurmloechern von Jaegern funktioniert nicht richtig.
+- Es kommt vor, dass Frachter negative Resourcen haben (moeglicherweise nur Frachter, die nicht ernten).
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht angemessen.
+
+Todo:
+- Die Virale Invasion der Orion sollte gegen unerwuenschte dominante Spezies genutzt werden.
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+---------------
+0.9.1 -> 0.9.2:
+---------------
+Behobene Fehler:
+- Die Dokumentation wurde verbessert.
+- Frachter sollten jetzt nicht mehr "stecken" bleiben bei einem Planeten, den sie kolonisieren wollen.
+- Schiffe werden wieder so gebaut, dass sie in der Datenbank die Rasse stehen haben.
+- Andere Kleine Fehler wurden behoben.
+
+Bekannte Fehler:
+- Da bei der Rasse Erd-Allianz 2 Schiffs-Klassen mit dem Namen "Frachter" existieren, wird, sobald der 
+  Stufe 6 Frachter gebaut werden soll, nur der Stufe 1 Frachter gebaut.
+- Es kommt vor, dass Frachter negative Resourcen haben (moeglicherweise nur Frachter, die nicht ernten).
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht angemessen.
+
+Todo:
+- Die Virale Invasion der Orion sollte gegen unerwuenschte dominante Spezies genutzt werden.
+- Subraumverzerrer sollten benutzt werden.
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+---------------
+0.9.0 -> 0.9.1:
+---------------
+Neue Features:
+- Die KI wurde nun komplett modularisiert in mehrere Klassen. Dadurch kann eine neue KI viel Code 
+  von ki_basis und ki_leicht wiederverwenden.
+
+Bekannte Fehler:
+- Moeglicherweise wurde bei manchen geaenderten Funktionen die Dokumentation noch nicht angepasst.
+- Da bei der Rasse Erd-Allianz 2 Schiffs-Klassen mit dem Namen "Frachter" existieren, wird, sobald der 
+  Stufe 6 Frachter gebaut werden soll, nur der Stufe 1 Frachter gebaut.
+- Es kommt vor, dass Frachter negative Resourcen haben (moeglicherweise nur Frachter, die nicht ernten).
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht angemessen.
+
+Todo:
+- Die Virale Invasion der Orion sollte gegen unerwuenschte dominante Spezies genutzt werden.
+- Subraumverzerrer sollten benutzt werden.
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+----------------
+0.8.15 -> 0.9.0:
+----------------
+Neue Features:
+- Bei installierter KI werden automatisch die Tabellen skrupel_ki_objekte, skrupel_ki_planeten, 
+  skrupel_ki_spezialschiffe und skrupel_ki_neuebasen installiert. Davon werden skrupel_ki_planeten und 
+  skrupel_ki_objekte bereits fuer die nicht kolonisierbaren Planeten bzw. fuer die Wurmloecher benutzt.
+  Diese Tabellen werden in der Datei tabellen.txt naeher erklaert.
+- Ausserdem wurden mehrere (nun redundante) Funktionen geloescht und eine neue Funktion hinzugefuegt, 
+  die fuer eine Tabelle die naechst-groesseren ID berechnet.
+
+Bekannte Fehler:
+- Moeglicherweise wurde bei manchen geaenderten Funktionen die Dokumentation noch nicht angepasst.
+- Da bei der Rasse Erd-Allianz 2 Schiffs-Klassen mit dem Namen "Frachter" existieren, wird, sobald der 
+  Stufe 6 Frachter gebaut werden soll, nur der Stufe 1 Frachter gebaut.
+- Es kommt vor, dass Frachter negative Resourcen haben (moeglicherweise nur Frachter, die nicht ernten).
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht angemessen.
+
+Todo:
+- Die Virale Invasion der Orion sollte gegen unerwuenschte dominante Spezies genutzt werden.
+- Subraumverzerrer sollten benutzt werden.
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+-----------------
+0.8.14 -> 0.8.15:
+-----------------
+Behobene Fehler:
+- In der Funktion ki_basis::fliegeSchiff() wurde ein mysql-Statement behoben.
+- Beim Bau von Orbitalen System auf Planeten wird nun die korrekte Menge an Resourcen abgezogen.
+
+Bekannte Fehler:
+- Da bei der Rasse Erd-Allianz 2 Schiffs-Klassen mit dem Namen "Frachter" existieren, wird, sobald der 
+  Stufe 6 Frachter gebaut werden soll, nur der Stufe 1 Frachter gebaut.
+- Es kommt vor, dass Frachter negative Resourcen haben (moeglicherweise nur Frachter, die nicht ernten).
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht angemessen.
+
+Todo:
+- Die Virale Invasion der Orion sollte gegen unerwuenschte dominante Spezies genutzt werden.
+- Subraumverzerrer sollten benutzt werden.
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+-----------------
+0.8.13 -> 0.8.14:
+-----------------
+Neue Features:
+- Auf den Planeten der KI wird nun versucht, eine Megafabrik und eine Bank zu bauen.
+
+Behobene Fehler:
+- Die Funktionen ki_leicht::beladeErnteSchiff(), ki_leicht::zuNeuenBasis(), ki_leicht::verwalteFrachter()
+  und ki_leicht::verwalteJaeger() wurden optimiert.
+- Das Datenfeld ki_leicht::$neue_basis_min_waffen wurde auf 5 gesetzt.
+- Verschiedene Kommentare wurden verbessert.
+
+Bekannte Fehler:
+- Da bei der Rasse Erd-Allianz 2 Schiffs-Klassen mit dem Namen "Frachter" existieren, wird, sobald der 
+  Stufe 6 Frachter gebaut werden soll, nur der Stufe 1 Frachter gebaut.
+- Es kommt vor, dass Frachter negative Resourcen haben (moeglicherweise nur Frachter, die nicht ernten).
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht angemessen.
+
+Todo:
+- Die Virale Invasion der Orion sollte gegen unerwuenschte dominante Spezies genutzt werden.
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+-----------------
+0.8.12 -> 0.8.13:
+-----------------
+Behobene Fehler:
+- Schiffe mit Terraformer verhalten sich nun korrekt.
+
+Neue Features:
+- Die Beschreibung zu ki_leicht wurde um die Verhaltensweise der Terraformer-Schiffe erweitert.
+
+Bekannte Fehler:
+- Da bei der Rasse Erd-Allianz 2 Schiffs-Klassen mit dem Namen "Frachter" existieren, wird, sobald der 
+  Stufe 6 Frachter gebaut werden soll, nur der Stufe 1 Frachter gebaut.
+- Es kommt vor, dass Frachter negative Resourcen haben (moeglicherweise nur Frachter, die nicht ernten).
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht angemessen.
+
+Todo:
+- Die Virale Invasion der Orion sollte gegen unerwuenschte dominante Spezies genutzt werden.
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+-----------------
+0.8.11 -> 0.8.12:
+-----------------
+Behobene Fehler:
+- Die Funktionen ki_leicht::baueClusterSchiff() und ki_leicht::baueQuarkSchiff() wurden optimiert.
+- Verschiedene Kommentare wurden verbessert.
+
+Neue Features:
+- Es werden nun (falls bei der Rasse vorhanden) Schiffe mit Terraformer (warme als auch kalte) gebaut.
+  Dabei kann die Frequenz, mit der sie gebaut werden als auch deren maximale Anzahl kontrolliert werden.
+- Schiffe mit Subpartikelcluster produzieren vorruebergehend nicht weiter, falls auf ihrem Planeten 
+  Lemin-Mangel herrscht.
+- In ki_basis wurde die Funktion ermittleOptimaleTemp() hinzugefuegt.
+
+Bekannte Fehler:
+- Terraformer-Schiffe fliegen nicht los, sondern bleiben bei ihrem Erschaffungs-Ort.
+- Da bei der Rasse Erd-Allianz 2 Schiffs-Klassen mit dem Namen "Frachter" existieren, wird, sobald der 
+  Stufe 6 Frachter gebaut werden soll, nur der Stufe 1 Frachter gebaut.
+- Es kommt vor, dass Frachter negative Resourcen haben (moeglicherweise nur Frachter, die nicht ernten).
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht angemessen.
+
+Todo:
+- Die Virale Invasion der Orion sollte gegen unerwuenschte dominante Spezies genutzt werden.
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+-----------------
+0.8.10 -> 0.8.11:
+-----------------
+Behobene Fehler:
+- Alle echo-Ausgaben wurden beseitigt.
+- Jonu wurde bei der Funktion ki_basis::umfliegeObjekt() als Autor miteingetragen.
+
+Neue Features:
+- Jaeger legen nun Minenfelder, wenn sie angeschlagen sind, Projektile an Bord haben und Feind-Schiffe 
+  nicht zu nahe sind.
+- Planeten mit aggressiven oder diebischen dominanten Spezies werden nun nicht mehr kolonisiert.
+
+Bekannte Fehler:
+- Da bei der Rasse Erd-Allianz 2 Schiffs-Klassen mit dem Namen "Frachter" existieren, wird, sobald der 
+  Stufe 6 Frachter gebaut werden soll, nur der Stufe 1 Frachter gebaut.
+- Es kommt vor, dass Frachter negative Resourcen haben (moeglicherweise nur Frachter, die nicht ernten).
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht angemessen.
+
+Todo:
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+----------------
+0.8.9 -> 0.8.10:
+----------------
+Behobene Fehler:
+- Einige Ungereimtheiten bei der Wurmloch-Benutzung der Jaeger wurden behoben
+
+Bekannte Fehler:
+- Da bei der Rasse Erd-Allianz 2 Schiffs-Klassen mit dem Namen "Frachter" existieren, wird, sobald der 
+  Stufe 6 Frachter gebaut werden soll, nur der Stufe 1 Frachter gebaut.
+- Es kommt vor, dass Frachter negative Resourcen haben (moeglicherweise nur Frachter, die nicht ernten).
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht angemessen.
+
+Todo:
+- Jaeger sollten Minenfelder benutzen
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+---------------
+0.8.8 -> 0.8.9:
+---------------
+Behobene Fehler:
+- Jaeger umfliegen Wurmloecher endlich wie erwuenscht.
+
+Neue Features:
+- Frachter und Jaeger umfliegen nun feindliche Minenfelder.
+
+Bekannte Fehler:
+- Da bei der Rasse Erd-Allianz 2 Schiffs-Klassen mit dem Namen "Frachter" existieren, wird, sobald der 
+  Stufe 6 Frachter gebaut werden soll, nur der Stufe 1 Frachter gebaut.
+- Es kommt vor, dass Frachter negative Resourcen haben (moeglicherweise nur Frachter, die nicht ernten).
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht angemessen.
+
+Todo:
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+---------------
+0.8.7 -> 0.8.8:
+---------------
+Behobene Fehler:
+- Jaeger umfliegen Wurmloecher nun sinnvoller, aber noch nicht perfekt.
+
+Bekannte Fehler:
+- Ist ein Schiff durch ein Wurmloch geflogen, und will dieses nun zu einem Ziel, was hinter dem Wurmloch 
+  liegt, so umfliegt es das Wurmloch immernoch falsch (siehe Funktionen umfliegeWurmloch() in ki_basis.php).
+- Da bei der Rasse Erd-Allianz 2 Schiffs-Klassen mit dem Namen "Frachter" existieren, wird, sobald der 
+  Stufe 6 Frachter gebaut werden soll, nur der Stufe 1 Frachter gebaut.
+- Es kommt vor, dass Frachter negative Resourcen haben (moeglicherweise nur Frachter, die nicht ernten).
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht angemessen.
+
+Todo:
+- Die KI sollte mit Minenfeldern umgehen koennen (selber Minenfelder machen bzw. sie umfliegen).
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+---------------
+0.8.6 -> 0.8.7:
+---------------
+Behobene Fehler:
+- Bekannte Wurmloecher werden nun bei der Weg-Berechung beruecksichtigt, sodass Jaeger diese benutzen, 
+  um schneller ans Ziel zu gelangen.
+
+Neue Features:
+- Einige Werte wurden bei ki_leicht veraendert, sodass ihr Verhalten schlauer ist.
+- Die Funktion berechneWinkel() in ki_funktionen.php berechnet nun den Winkel im Grad-Mass korrekt.
+- Einige Kommentar- und Dokumentationsverbesserungen wurden vorgenommen.
+
+Bekannte Fehler:
+- Ist ein Schiff durch ein Wurmloch geflogen, und will dieses nun zu einem Ziel, was hinter dem Wurmloch 
+  liegt, so umfliegt es das Wurmloch falsch (siehe Funktionen umfliegeWurmloch() in ki_basis.php).
+- Da bei der Rasse Erd-Allianz 2 Schiffs-Klassen mit dem Namen "Frachter" existieren, wird, sobald der 
+  Stufe 6 Frachter gebaut werden soll, nur der Stufe 1 Frachter gebaut.
+- Es kommt vor, dass Frachter negative Resourcen haben (moeglicherweise nur Frachter, die nicht ernten).
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht angemessen.
+
+Todo:
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+---------------
+0.8.5 -> 0.8.6:
+---------------
+Behobene Fehler:
+- Schiffe fliegen nun nicht mehr absichtlich durch bekannte instabile Wurmloecher.
+- Schiffe fliegen nun mit flug=3 in der Datenbank, wenn sie zu einem Feindschiff fliegen.
+- Ein Fehler bei der Eindeutigkeit von einer Datenbank-Anfrage wurde behoben.
+
+Neue Features:
+- Fliehende Schiffe sollten nun weiter weg fluechten.
+
+Bekannte Fehler:
+- Ist ein Schiff durch ein Wurmloch geflogen, und will dieses nun zu einem Ziel, was hinter dem Wurmloch 
+  liegt, so umfliegt es das Wurmloch falsch (siehe Funktionen umfliegeWurmloch() in ki_basis.php und
+  ermittleWinkel() in ki_funktionen).
+- Da bei der Rasse Erd-Allianz 2 Schiffs-Klassen mit dem Namen "Frachter" existieren, wird, sobald der 
+  Stufe 6 Frachter gebaut werden soll, nur der Stufe 1 Frachter gebaut.
+- Es kommt vor, dass Frachter negative Resourcen haben (moeglicherweise nur Frachter, die nicht ernten).
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht angemessen.
+
+Todo:
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+---------------
+0.8.4 -> 0.8.5:
+---------------
+Behobene Fehler:
+- Fliegt ein Schiff durch ein stabiles Wurmloch, so wird dies nun dauerthaft gespeichert.
+
+Neue Features:
+- Die Datei feature-lost.txt wurde aktualisiert.
+
+Bekannte Fehler:
+- Ist ein Schiff durch ein Wurmloch geflogen, und will dieses nun zu einem Ziel, was hinter dem Wurmloch 
+  liegt, so umfliegt es das Wurmloch falsch (siehe Funktionen umfliegeWurmloch() in ki_basis.php und
+  ermittleWinkel() in ki_funktionen).
+- Da bei der Rasse Erd-Allianz 2 Schiffs-Klassen mit dem Namen "Frachter" existieren, wird, sobald der 
+  Stufe 6 Frachter gebaut werden soll, nur der Stufe 1 Frachter gebaut.
+- Es kommt vor, dass Frachter negative Resourcen haben (moeglicherweise nur Frachter, die nicht ernten).
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht angemessen.
+
+Todo:
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+---------------
+0.8.3 -> 0.8.4:
+---------------
+Neue Features:
+- Fliegt ein Schiff durch ein stabiles Wurmloch, so wird dies gespeichert, sodass es als Abkuerzung 
+  genutzt werden kann.
+
+Bekannte Fehler:
+- Da bei der Rasse Erd-Allianz 2 Schiffs-Klassen mit dem Namen "Frachter" existieren, wird, sobald der 
+  Stufe 6 Frachter gebaut werden soll, nur der Stufe 1 Frachter gebaut.
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht angemessen.
+
+Todo:
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+---------------
+0.8.2 -> 0.8.3:
+---------------
+Neue Features:
+- Fliegt ein Schiff durch ein instabiles Wurmloch, so wird dies gespeichert, sodass kein anderes Schiff 
+  mehr durch dieses Wurmloch fliegt.
+
+Behobene Fehler:
+- Es wird nun der automatische Fabrikbau anstatt der Abwehrbar aktiviert.
+- Raumfalten werden nun erst ab Rumpf-Level 7 und Antriebe-Level 8 benutzt.
+- Die echo-Anweisungen wurden entfernt.
+
+Bekannte Fehler:
+- Fliegt ein Schiff durch ein stabiles Wurmloch, so wird dies nicht gespeichert.
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht angemessen.
+
+Todo:
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+---------------
+0.8.1 -> 0.8.2:
+---------------
+Behobene Fehler:
+- Jaeger fliegen unbekannte sichtbare/gesehene Wurmloecher nun an.
+
+Bekannte Fehler:
+- Fliegt ein Schiff durch ein stabiles Wurmloch, so wird dies nicht gespeichert.
+- Ist die KI ein Borg, scheint sie fast die gesamten Cantox auf dem Heimat-Planeten auszugeben.
+- Es kommt vor, dass Frachter, die eine Route fliegen, negative Resourcen-Werte haben.
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht angemessen.
+
+Todo:
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+---------------
+0.8.0 -> 0.8.1:
+---------------
+Behobene Fehler:
+- Einige Fehler in der Berechnung von Kursen und bei der Wurmloch-Erkennung wurden behoben.
+
+Neue Features:
+- Es wird nun in Logbuechern gespeichert, welche Wurmloecher schon gesichtet wurden.
+- Das automatische Bauen von P.D.S. wird nun erst aktiviert, falls es Feind-Kontakt gibt.
+
+Bekannte Fehler:
+- Jaeger fliegen gesehene Wurmloecher nicht an.
+- Ist die KI ein Borg, scheint sie fast die gesamten Cantox auf dem Heimat-Planeten auszugeben.
+- Es kommt vor, dass Frachter, die eine Route fliegen, negative Resourcen-Werte haben.
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht angemessen.
+
+Todo:
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+---------------
+0.7.1 -> 0.8.0:
+---------------
+Neue Features:
+- Jaeger sind nun in der Lage, Wurmloecher zu nutzen. Sind Wurmloecher in Sichtweite, so fliegt ein Jaeger 
+  jeweils zu einem Wurmloch, sofern dieses noch nicht erkundet wurde. Ist es stabil, so wird diese Wurmloch 
+  bei Distanz-Berechnungen fuer die Ziel-Bestimmung mit einbezogen, sodass Wurmloecher, die schneller zum 
+  Ziel fuehren, benutzt werden.
+- Ist ein Jaeger gerade durch ein Wurmloch gefloegen, wird je nach Ziel das Wurmloch umflogen, sodass der Jaeger
+  nicht erneut durch das Wurmloch fliegt.
+- Die KI kolonisiert nun mindestens so lange, bis eine Mindest-Anzahl von Kolonien erreicht wurde. Erst ab dann
+  werden weitere Kriterien fuer die weitere Kolonisierung ueberprueft.
+
+Bekannte Fehler:
+- Es kommt vor, dass Frachter, die eine Route fliegen, negative Resourcen-Werte haben.
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht angemessen.
+
+Todo:
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+---------------
+0.7.0 -> 0.7.1:
+---------------
+Behobene Fehler:
+- Es wird nun in (hoffentlich) allen MySQL-Befehlen falls noetig auf die Datenbank-ID des aktuellen Spieles
+  verwiesen, um Fehler bei mehreren Spielen auf einem Skrupel-Server zu vermeiden.
+
+Neue Features:
+- Kleinere Code- (betreffend Lesbarkeit) sowie Kommentar-Verbesserungen (betreffend Vollstaendigkeit) 
+  wurden vorgenommen.
+
+Bekannte Fehler:
+- Es kommt vor, dass Frachter, die eine Route fliegen, negative Resourcen-Werte haben.
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht angemessen.
+
+Todo:
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+---------------
+0.6.3 -> 0.7.0:
+---------------
+Neue Features:
+- In der Klasse ki_basis gibt es nun eine Funktion, mit der Raumfalten initialisiert werden koennen.
+- Sind Frachter oder Jaeger gestrandet (haben also kein Lemin und sind nicht auf einem Planeten mit Lemin), 
+  so werden diese per Raumfalte mit Lemin versorgt, sodass sie ihre Aufgaben wieder wahrnehmen koennen.
+
+Bekannte Fehler:
+- Es kommt vor, dass Frachter, die eine Route fliegen, negative Resourcen-Werte haben.
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht angemessen.
+
+Todo:
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+---------------
+0.6.2 -> 0.6.3:
+---------------
+Behobene Fehler:
+- Rassen, die keine bevorzugte Temperatur fuer Planeten haben, kolonisieren nun sinnvoll.
+
+Bekannte Fehler:
+- Es kommt vor, dass Frachter, die eine Route fliegen, negative Resourcen-Werte haben.
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht angemessen.
+
+Todo:
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+---------------
+0.6.1 -> 0.6.2:
+---------------
+Behobene Fehler:
+- Es werden bei Jaegern nur noch soviele Projektile gebaut, wie maximal moeglich sind.
+
+Bekannte Fehler:
+- Es kommt vor, dass Frachter, die eine Route fliegen, negative Resourcen-Werte haben.
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht angemessen.
+
+Todo:
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+---------------
+0.6.0 -> 0.6.1:
+---------------
+Behobene Fehler:
+- Einige Fehler in der Routen-Verwaltung der Frachter wurden behoben.
+
+Bekannte Fehler:
+- Es kommt vor, dass Frachter, die eine Route fliegen, negative Resourcen-Werte haben.
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht angemessen.
+
+Todo:
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+--------------
+0.55 -> 0.6.0:
+--------------
+Behobene Fehler:
+- Frachter, die eine Route haben, nehmen nach erfolgreicher Flucht wieder ihre Route auf.
+
+Neue Features:
+- Die Versions-Nummern haben jetzt folgendes Schema: 
+  [grosse Aenderungen].[mittelgrosse Aenderungen].[kleine Aenderungen]
+- Die komplette Liste mit Features von ki_basis.php und ki_funktionen.php wurde hinzugefuegt.
+- Eine komplette Beschreibung der Verhaltensweisen von ki_leicht wurde hinzugefuegt.
+- Frachter, die eine Route fliegen, fliegen bei geringen Tankinhalt zum naechstgelegenen Planeten um aufzutanken.
+  Anschliessend setzen sie ihre Route fort.
+
+Bekannte Fehler:
+- Es kommt vor, dass Frachter, die eine Route fliegen, negative Resourcen-Werte haben.
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht angemessen.
+
+Todo:
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+-------------
+0.54 -> 0.55:
+-------------
+Neue Features:
+- ki_leicht::ermittleGegnerAngriffe() gibt jetzt die Koordinaten aller angreifenden Schiffe zurueck, die Kurs auf
+  einen Planeten oder Schiff der KI gesetzt haben.
+- Schiffe der KI, die angegriffen werden, werden jetzt in einer Liste gespeichert.
+- Jaeger fliegen jetzt zu angreifenden Schiffen, wenn sie in Reichweite sind (diese Reichweite ist in ki_leicht
+  hoeher als die Reichweite zu nicht angreifenden Schiffen).
+- Jaeger fliegen auch zu Schiffen, die auf der Flucht sind, wenn diese in der Reichweite sind.
+- Die Dokumentation von ki_basis::baueSchiff() und anderen Funktionen wurde verbessert.
+
+Bekannte Fehler:
+- Die Route eines Frachters wird nach erfolgreicher Flucht nicht wieder aufgenommen.
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht aggressiv.
+
+Todo:
+- Die Feature-Liste komplett machen.
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+-------------
+0.53 -> 0.54:
+-------------
+Neue Features:
+- Frachter, die eine Route abfliegen, ernten nun Vorraete genau dann, wenn auf dem Planeten, den sie mit Resourcen
+  versorgen sollen, ein Schiff mit Subpartikelcluster ist. Ansonsten werden die Vorraete auf den Planeten verkauft, 
+  sodass Cantox gewonnen wird.
+- Die Feature-Liste wurde in die datei feature-list.txt aufgenommen. Bisher ist die Feature-Liste fuer die Klasse 
+  ki_basis komplett.
+
+Bekannte Fehler:
+- Das Fluchtverhalten der Frachter scheint im Zusammenhang mit Routen nicht richtig zu arbeiten.
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht aggressiv.
+
+Todo:
+- Eine komplette Liste mit Features fehlt noch.
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+-------------
+0.52 -> 0.53:
+-------------
+Behobene Fehler:
+- Falls ein Frachter an einem Planeten mit Sternenbasis ist, an dem nicht genug Lemin fuer den Start vorhanden ist,
+  und der Frachter Kolonisten einlaedt, so werden diese auf den Planeten gebeamt, anstatt ueberschrieben zu werden.
+
+Neue Features:
+- Fliegt ein Jaeger von einem Planeten mit Sternenbasis los, so wird nicht voll getankt, damit der Lemin-Vorrat
+  des Planeten nicht belastet wird.
+- Frachter fluechten jetzt nicht mehr zu einem Planeten, sondern genau zu den Koordinaten, die zu dem Schiff, von 
+  dem gefluechtet werden soll, entgegen gesetzt sind.
+
+Bekannte Fehler:
+- Das Fluchtverhalten der Frachter scheint im Zusammenhang mit Routen nicht richtig zu arbeiten.
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht aggressiv.
+
+Todo:
+- Eine komplette Liste mit Features fehlt noch.
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+-------------
+0.51 -> 0.52:
+-------------
+Behobene Fehler:
+- Schiffe mit Subpartikelcluster oder Quarksreorganisator sollten nun wieder richtig erkannt und verwaltet werden.
+- Das Toleranz-Level fuer den Antrieb und die Waffen sollte nun richtig eingesetzt werden.
+
+Neue Features:
+- Soll ein Schiff mit Subpartikelcluster oder Quarksreorganisator gebaut werden, wird dies mit Antriebs-Stufe 1
+  und Waffen-Stufe 1 ausgestattet.
+- Soll ein Frachter gebaut werden, wird dieser mit Waffen-Stufe 1 ausgetattet.
+- Der Change-Log wurde in die Datei changelog.txt ausgelagert.
+
+Bekannte Fehler:
+- Das Fluchtverhalten der Frachter scheint nicht richtig zu arbeiten.
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht aggressiv.
+
+Todo:
+- Eine komplette Liste mit Features fehlt noch.
+- Es sollen mehrere KI-Spieler pro installierter KI moeglich sein.
+
+------------
+0.5 -> 0.51:
+------------
+Behobene Fehler:
+- Die Temperatur-Berechnung bei ki_leicht::PlanetLohntSich() sollte nun richtig funktionieren, sodass nur von der 
+  Temperatur her passende Planeten kolonisiert werden.
+
+Neue Features:
+- Die P.D.S. der Sternenbasen werden nun ausgebaut, sobald das Spiel weit genug fortgeschritten ist.
+- Frachter tanken nun nicht komplett voll, wenn sie gerade an einer Sternenbasis sind.
+
+Bekannte Fehler:
+- Das Fluchtverhalten der Frachter scheint nicht richtig zu arbeiten.
+- Teilweise verhalten sich Jaeger in unmittelbarer Naehe eines gegnerischen Schiffes nicht aggressiv.
