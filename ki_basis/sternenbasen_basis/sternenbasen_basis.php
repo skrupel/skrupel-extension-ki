@@ -70,7 +70,7 @@ abstract class sternenbasen_basis {
 	 * 						   min1, min2, min3).
 	 */
 	function berechneRaumfaltenKosten($resourcen) {
-		return (8 * ($resourcen[1] + $resourcen[2] + $resourcen[3] + $resourcen[4] + $resourcen[5])) + 75;
+		return (8 * ($resourcen['vorrat'] + $resourcen['lemin'] + $resourcen['min1'] + $resourcen['min2'] + $resourcen['min3'])) + 75;
 	}
 	
 	/**
@@ -122,7 +122,7 @@ abstract class sternenbasen_basis {
 			$ziely = $ziel_koords['y_pos'];
 		} else {
 			$extra_string = "s:";
-			$ziel_koords = @mysql_query("SELECT kox, kox FROM skrupel_schiffe WHERE id='$ziel_id'");
+			$ziel_koords = @mysql_query("SELECT kox, koy FROM skrupel_schiffe WHERE id='$ziel_id'");
 			$ziel_koords = @mysql_fetch_array($ziel_koords);
 			if($ziel_koords == null) return false;
 			$zielx = $ziel_koords['kox'];
@@ -312,7 +312,7 @@ abstract class sternenbasen_basis {
 		while($erweiterbar) {
 			$geld = @mysql_query("SELECT cantox FROM skrupel_planeten WHERE id='$planeten_id'");
 			$geld = @mysql_fetch_array($geld);
-			$geld = $geld[cantox];
+			$geld = $geld['cantox'];
 			$basis_daten = @mysql_query("SELECT t_huelle, t_antrieb FROM skrupel_sternenbasen 
 				WHERE planetid='$planeten_id'");
 			$basis_daten = @mysql_fetch_array($basis_daten);

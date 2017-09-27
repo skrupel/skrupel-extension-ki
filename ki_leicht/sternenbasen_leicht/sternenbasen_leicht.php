@@ -82,7 +82,7 @@ class sternenbasen_leicht extends sternenbasen_basis {
 				$lemin_raumfalte = eigenschaften::$raumfalten_infos->raumfalte_frachter_lemin;
 			else $lemin_raumfalte = eigenschaften::$raumfalten_infos->raumfalte_jaeger_lemin;
 			if($planet_cantox < (8 * $lemin_raumfalte) || $lemin_raumfalte > $planet_lemin) continue;
-			$res_array = array(0, 0, $lemin_raumfalte, 0, 0, 0);
+			$res_array = array('cantox'=>0, 'vorrat'=>0, 'lemin'=>$lemin_raumfalte, 'min1'=>0, 'min2'=>0, 'min3'=>0);
 			$this->sendeRaumfalte($schiff_id, $basen_planeten_id, false, $res_array);
 		}
 	}
@@ -127,13 +127,13 @@ class sternenbasen_leicht extends sternenbasen_basis {
 			$raumfalte_lemin = $lemin - eigenschaften::$raumfalten_infos->raumfalte_min_lemin_basen;
 			if(eigenschaften::$raumfalten_infos->max_lemin_basen < $lemin_planet 
 			|| $raumfalte_lemin < 0) $raumfalte_lemin = 0;
-			$resourcen = array(0, 0, $raumfalte_lemin, $raumfalte_min1, $raumfalte_min2, $raumfalte_min3);
+			$resourcen = array('cantox'=>0, 'vorrat'=>0, 'lemin'=>$raumfalte_lemin, 'min1'=>$raumfalte_min1, 'min2'=>$raumfalte_min2, 'min3'=>$raumfalte_min3);
 			$cantox_kosten = $this->berechneRaumfaltenKosten($resourcen);
 			$raumfalte_cantox = $cantox - eigenschaften::$raumfalten_infos->raumfalte_min_cantox_basen 
 								-$cantox_kosten;
 			if(eigenschaften::$raumfalten_infos->max_cantox_basen < $cantox_planet 
 			|| $raumfalte_cantox < 0) $raumfalte_cantox = 0;
-			$resourcen[0] = $raumfalte_cantox;
+			$resourcen['cantox'] = $raumfalte_cantox;
 			if($this->sendeRaumfalte($planet, $planeten_id, true, $resourcen)) {
 				$planeten_res = @mysql_query("SELECT cantox, min1, min2, min3, lemin FROM skrupel_planeten 
 					WHERE id='$planeten_id'");

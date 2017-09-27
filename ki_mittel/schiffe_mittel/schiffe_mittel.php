@@ -65,7 +65,7 @@ abstract class schiffe_mittel extends schiffe_basis {
 				AND (ziely='$wurmloch_y]')");
 			$schiffe_zum_wurmloch = @mysql_fetch_array($schiffe_zum_wurmloch);
 			if($schiffe_zum_wurmloch['sum(zielid)'] == null || $schiffe_zum_wurmloch['sum(zielid)'] == 0) 
-				return array('x'=>$wurmloch_daten['x'], 'y'=>$wurmloch_daten['y'], 0);
+				return array('x'=>$wurmloch_daten['x'], 'y'=>$wurmloch_daten['y'], 'id'=>0);
 		}
 		//Ansonsten wird ein Ziel festgelegt, dass weiter weg ist.
 		$spiel_umfang = @mysql_query("SELECT umfang FROM skrupel_spiele WHERE id='$spiel_id'");
@@ -108,7 +108,7 @@ abstract class schiffe_mittel extends schiffe_basis {
 			$eigene_planeten[] = array('x'=>$koords['x_pos'], 'y'=>$koords['y_pos']);
 		}
 		$ziel = self::ermittleBesteKoordinaten($koordinaten, $eigene_planeten);
-		return array('x'=>$ziel['x'], 'y'=>$ziel['y'], 0);
+		return array('x'=>$ziel['x'], 'y'=>$ziel['y'], 'id'=>0);
 	}
 }
 ?>
