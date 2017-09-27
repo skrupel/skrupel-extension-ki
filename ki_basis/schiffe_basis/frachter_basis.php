@@ -176,8 +176,8 @@ abstract class frachter_basis extends schiffe_basis {
 			WHERE (x_pos='$x_pos') AND (y_pos='$y_pos') AND (spiel='$spiel_id')");
 		$resourcen = @mysql_fetch_array($resourcen);
 		$planeten_id = $resourcen['id'];
-        $planet_cantox = $resourcen['cantox'];
-        $planet_vorrat = $resourcen['vorrat'];
+		$planet_cantox = $resourcen['cantox'];
+		$planet_vorrat = $resourcen['vorrat'];
 		$leute_max = ($resourcen['kolonisten'] / 2) + 1000;
 		$max_kolonien_leute = eigenschaften::$frachter_kolo_infos->kolo_leute 
 							  * eigenschaften::$frachter_kolo_infos->kolo_max_kolonien;
