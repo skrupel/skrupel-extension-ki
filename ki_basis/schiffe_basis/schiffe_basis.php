@@ -98,8 +98,8 @@ abstract class schiffe_basis {
 	}
 	
 	/**
-	 * Diese Funktion ermittelt einen Planeten fuer ein Schiff, zu den er fliegen soll.
-	 * arguments: $schiff_id - Die Datenbank-ID des Schiffs, der erkunden soll.
+	 * Diese Funktion ermittelt einen Planeten fuer ein Schiff, zu dem er fliegen soll.
+	 * arguments: $schiff_id - Die Datenbank-ID des Schiffs, das erkunden soll.
 	 * returns: Ein Array aus X- und Y-Koordinate sowie der Datenbank-ID (falls es nicht nur Koordinaten sind) 
 	 * 			des Ziels.
 	 * 			null, falls kein Ziel-Planet gefunden wurde.
@@ -125,8 +125,8 @@ abstract class schiffe_basis {
 				WHERE (besitzer='$comp_id') AND (spiel='$spiel_id') AND (zielx='$wurmloch_x') 
 				AND (ziely='$wurmloch_y]')");
 			$schiffe_zum_wurmloch = @mysql_fetch_array($schiffe_zum_wurmloch);
-			if($schiffe_zum_wurmloch['sum(zielid)'] == null || $schiffe_zum_wurmloch['sum(zielid)'] == 0) 
-				return array('x'=>$wurmloch_daten['x'], 'y'=>$wurmloch_daten['y'], 0);
+			if($schiffe_zum_wurmloch['sum(id)'] == null || $schiffe_zum_wurmloch['sum(id)'] == 0) 
+				return array('x'=>$wurmloch_daten['x'], 'y'=>$wurmloch_daten['y'], 'id'=>0);
 		}
 		//Ansonsten wird ein Ziel festgelegt, dass weiter weg ist.
 		$spiel_umfang = @mysql_query("SELECT umfang FROM skrupel_spiele WHERE id='$spiel_id'");
@@ -169,7 +169,7 @@ abstract class schiffe_basis {
 				$bester_sektor = $koords;
 			}
 		}
-		return array('x'=>$bester_sektor['x'], 'y'=>$bester_sektor['y'], 0);
+		return array('x'=>$bester_sektor['x'], 'y'=>$bester_sektor['y'], 'id'=>0);
 	}
 	
 	/**

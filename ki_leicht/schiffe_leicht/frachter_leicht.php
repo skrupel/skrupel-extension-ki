@@ -190,7 +190,7 @@ class frachter_leicht extends frachter_basis {
 		if($schiff_status != 2) {
 			//Das Schiff fliegt tanken, falls nicht mehr genug Lemin da ist.
 			$strecken_lemin = $this->ermittleStreckenVerbrauch($schiff_id);
-			if($schiff_lemin < (eigenschaften::$jaeger_infos->min_frachter_lemin_prozent * $strecken_lemin/100)) {
+			if($schiff_lemin < (eigenschaften::$frachter_infos->min_frachter_lemin_prozent * $strecken_lemin/100)) {
 				$this->fliegeTanken($schiff_id);
 				return;
 			}

@@ -569,7 +569,7 @@ abstract class ki_basis {
 		$root_path = "../extend/ki/";
 		$directories = openDir($root_path);
 		$dir_array = array();
-		$ausnahmen = array("dokumentation", "ki_basis", ".", "..");
+		$ausnahmen = array("dokumentation", "docs", "ki_basis", ".", "..", ".svn", ".project", ".git", ".gitignore", "CHANGELOG.txt", "README.md");
 		while($dir = readdir($directories)){
 			if(in_array($dir, $ausnahmen)) continue;
 			$dir_array[] = $dir;

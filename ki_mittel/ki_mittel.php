@@ -70,7 +70,7 @@ class ki_mittel extends ki_basis {
 		//arguments: $max_distanz_geleitschutz, $min_lemin_warten, $min_lemin_geleit_geben
 		$geleitschutz_infos = & new geleitschutz_infos(70, 50, 60);
 		
-		ki_basis::__construct($sid, $id, "Computer (Leicht)", $schiffe_infos, $jaeger_infos, $scouts_infos, 
+		ki_basis::__construct($sid, $id, "Computer (Mittel)", $schiffe_infos, $jaeger_infos, $scouts_infos, 
 						$frachter_infos, $frachter_kolo_infos, $frachter_route_infos, $spezialschiffe_infos, 
 						$basen_neu_infos, $basen_ausbau_infos, $basen_schiffbau_infos, $raumfalten_infos, 
 						$planeten_infos, $geleitschutz_infos);

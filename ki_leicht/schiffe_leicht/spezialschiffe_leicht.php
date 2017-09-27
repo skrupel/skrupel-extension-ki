@@ -288,12 +288,13 @@ class spezialschiffe_leicht extends schiffe_basis {
 			$y_pos = $schiff_daten['koy'];
 			$this->scanneUmgebung($virale_id);
 			if($status == 2) {
-				$planeten_daten = @mysql_query("SELECT id, native_kol, sternenbasis FROM skrupel_planeten 
+				$daten = @mysql_query("SELECT id, native_kol, sternenbasis, x_pos, y_pos FROM skrupel_planeten 
 						WHERE (spiel='$spiel_id') AND (x_pos='$x_pos') AND (y_pos='$y_pos')");
-				$planeten_daten = @mysql_fetch_array($planeten_daten);
-				$planeten_id = $planeten_daten['id'];
-				$planeten_native = $planeten_daten['native_kol'];
-				$sternenbasis = $planeten_daten['sternenbasis'];
+				$daten = @mysql_fetch_array($daten);
+				$planeten_id = $daten['id'];
+				$planeten_native = $daten['native_kol'];
+				$sternenbasis = $daten['sternenbasis'];
+				$planeten_daten[] = array('x'=>$daten['x_pos'], 'y'=>$daten['y_pos'], 'id'=>$daten['id']);
 				if(in_array($planeten_id, schiffe_basis::ermittlePlanetenFuerViraleInvasionSchiffe())) {
 					if($planeten_native >= eigenschaften::$spezialschiffe_infos->min_native_invasion) 
 						@mysql_query("UPDATE skrupel_schiffe SET spezialmission=18 WHERE id='$virale_id'");
