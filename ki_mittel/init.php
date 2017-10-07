@@ -8,6 +8,6 @@
  
 include_once("ki_mittel.php");
 
-$ki_mittel = & new ki_mittel($sid, $id);
+$ki_mittel = new ki_mittel($sid, $id);
 $ki_mittel->berechneZug();
 ?>

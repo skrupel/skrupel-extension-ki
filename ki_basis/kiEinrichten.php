@@ -8,8 +8,8 @@
  */
 
 include ('../inc.conf.php');
-$conn = @mysql_connect($server,$login,$password);
-$db = @mysql_select_db($database,$conn);
+include_once ('../inhalt/inc.hilfsfunktionen.php');
+open_db();
 
 include ("../extend/ki/ki_basis/ki_basis.php");
 $result = @mysql_query("SHOW TABLES LIKE 'skrupel_ki_planeten'") or die(mysql_error());

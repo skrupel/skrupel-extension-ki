@@ -412,7 +412,7 @@ abstract class schiffe_basis {
 		$rasse = null;
 		foreach(eigenschaften::$schiff_arrays as $schiff_array) {
 			$spezial_string = $schiff_array[17];
-			$sub_string = substr($spezial_string, 5, 1)+0;
+			$sub_string = (int)substr($spezial_string, 5, 1)+0;
 			if($sub_string != 0) {
 				$terra_warm_schiff_id = $schiff_array[1];
 				$rasse_index = count($schiff_array) - 1;
