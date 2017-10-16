@@ -6,8 +6,7 @@
  * diese gestartet werden kann.
  */
  
-include_once("ki_leicht.php");
+include_once 'ki_leicht.php';
 
 $leichte_ki = new ki_leicht($sid, $id);
 $leichte_ki->berechneZug();
-?>

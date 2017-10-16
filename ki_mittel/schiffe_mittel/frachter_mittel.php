@@ -5,6 +5,5 @@
  * Erweitert frachter_leicht.
  */
 class frachter_mittel extends frachter_leicht {
-	
+    
 }
-?>

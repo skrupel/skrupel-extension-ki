@@ -6,5 +6,4 @@
  * ki_daten eingefuegt.
  */
 
-$ki_daten[] = array('ordner'=>"ki_mittel", 'nick'=>"Computer (Mittel)");
-?>
+$ki_daten[] = array('ordner' => 'ki_mittel', 'nick' => 'Computer (Mittel)');
